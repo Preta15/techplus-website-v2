@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation';
+import { useAppSelector } from '@/lib/store/hooks';
 
 interface NavbarTabsProps {
   currentTab: number;
@@ -27,10 +28,14 @@ export default function NavbarTabs({
   tabOrientation,
 }: NavbarTabsProps) {
   const router = useRouter();
+  const userRole = useAppSelector((state) => state.user.userRole);
+  const isAdmin = userRole === 'admin';
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setCurrentTab(newValue);
-    const routes = ['/', '/team', '/calendar'];
+    const routes = isAdmin 
+      ? ['/', '/team', '/calendar', '/admin']
+      : ['/', '/team', '/calendar'];
     if (routes[newValue]) {
       router.push(routes[newValue]);
     }
@@ -96,6 +101,13 @@ export default function NavbarTabs({
         {...a11yProps(2)}
         className={tabClasses}
       />
+      {isAdmin && (
+        <Tab
+          label="Admin"
+          {...a11yProps(3)}
+          className={tabClasses}
+        />
+      )}
     </Tabs>
   );
 }

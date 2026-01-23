@@ -39,13 +39,18 @@ export default function Navbar() {
     }
   }, []);
 
+  const userRole = useAppSelector((state) => state.user.userRole);
+  const isAdmin = userRole === 'admin';
+
   useEffect(() => {
-    const routes = ['/', '/team', '/calendar'];
+    const routes = isAdmin 
+      ? ['/', '/team', '/calendar', '/admin']
+      : ['/', '/team', '/calendar'];
     const index = routes.indexOf(pathname);
     if (index !== -1) {
       setCurrentTab(index);
     }
-  }, [pathname]);
+  }, [pathname, isAdmin]);
 
   const handleLogin = () => {
     router.push('/login');
