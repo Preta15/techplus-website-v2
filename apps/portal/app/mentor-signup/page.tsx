@@ -5,6 +5,7 @@ import { TextField, Button, Alert } from '@mui/material';
 import ArrowForward from '@mui/icons-material/ArrowForward';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/navigation/Navbar';
 import { applicationService } from '@/lib/services/applicationService';
 import { useAppSelector } from '@/lib/store/hooks';
@@ -83,14 +84,42 @@ export default function MentorSignupPage() {
 
         {/* LEFT LEAVES - way down */}
         <div className="absolute top-[30vh] left-0">
-          <img src={leftLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30 pointer-events-none" />
-          <img src={leftLeafPath} alt="decorative leaf" className="h-[50vh] w-auto mt-[30vh] opacity-30 pointer-events-none" />
+          <Image
+            src={leftLeafPath}
+            alt="decorative leaf"
+            width={456}
+            height={554}
+            className="h-[50vh] w-auto opacity-30 pointer-events-none"
+            unoptimized
+          />
+          <Image
+            src={leftLeafPath}
+            alt="decorative leaf"
+            width={456}
+            height={554}
+            className="h-[50vh] w-auto mt-[30vh] opacity-30 pointer-events-none"
+            unoptimized
+          />
         </div>
 
         {/* RIGHT LEAVES - pulled up with negative space */}
         <div className="absolute top-0 right-0 -mt-[15vh]">
-          <img src={rightLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30 pointer-events-none" />
-          <img src={rightLeafPath} alt="decorative leaf" className="h-[50vh] w-auto mt-[40vh] opacity-30 pointer-events-none" />
+          <Image
+            src={rightLeafPath}
+            alt="decorative leaf"
+            width={451}
+            height={615}
+            className="h-[50vh] w-auto opacity-30 pointer-events-none"
+            unoptimized
+          />
+          <Image
+            src={rightLeafPath}
+            alt="decorative leaf"
+            width={451}
+            height={615}
+            className="h-[50vh] w-auto mt-[40vh] opacity-30 pointer-events-none"
+            unoptimized
+          />
         </div>
 
           <div className="max-w-xl mx-auto">
