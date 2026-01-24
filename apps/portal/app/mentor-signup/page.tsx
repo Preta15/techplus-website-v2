@@ -77,40 +77,20 @@ export default function MentorSignupPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen py-16 px-4" style={{ backgroundColor: '#ffffff' }}>
+      <div className="min-h-screen py-16 px-4 overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
 
-<<<<<<< HEAD:apps/portal/app/mentor-signup/page.tsx
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-white mb-2">Program</label>
-                <TextField
-                  fullWidth
-                  placeholder="e.g., Computer Science"
-                  value={program}
-                  onChange={(e) => setProgram(e.target.value)}
-                  className="bg-gray-800 rounded"
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      color: 'white',
-                      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.3)' },
-                      '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.5)' },
-                      '&.Mui-focused fieldset': { borderColor: '#76a36d' },
-                    },
-                  }}
-                />
-=======
         <div className="relative">
 
         {/* LEFT LEAVES - way down */}
         <div className="absolute top-[30vh] left-0">
-          <img src={leftLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30" />
-          <img src={leftLeafPath} alt="decorative leaf" className="h-[40vh] w-auto mt-[30vh] opacity-30" />
+          <img src={leftLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30 pointer-events-none" />
+          <img src={leftLeafPath} alt="decorative leaf" className="h-[50vh] w-auto mt-[30vh] opacity-30 pointer-events-none" />
         </div>
 
         {/* RIGHT LEAVES - pulled up with negative space */}
         <div className="absolute top-0 right-0 -mt-[15vh]">
-          <img src={rightLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30" />
-          <img src={rightLeafPath} alt="decorative leaf" className="h-[40vh] w-auto mt-[90vh] opacity-30" />
+          <img src={rightLeafPath} alt="decorative leaf" className="h-[50vh] w-auto opacity-30 pointer-events-none" />
+          <img src={rightLeafPath} alt="decorative leaf" className="h-[50vh] w-auto mt-[40vh] opacity-30 pointer-events-none" />
         </div>
 
           <div className="max-w-xl mx-auto">
@@ -146,7 +126,7 @@ export default function MentorSignupPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-white mb-2">Year of Study</label>
+                  <label className="block text-[#0A1628] mb-2">Year of Study</label>
                   <TextField
                     fullWidth
                     type="number"
@@ -164,12 +144,11 @@ export default function MentorSignupPage() {
                     }}
                   />
                 </div>
->>>>>>> 6e76355 (started editing mentor/mentee portal):app/mentor-signup/page.tsx
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-white mb-2">Company</label>
+                  <label className="block text-[#0A1628] mb-2">Company</label>
                   <TextField
                     fullWidth
                     placeholder="Current or previous company"
@@ -187,7 +166,7 @@ export default function MentorSignupPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-white mb-2">Role</label>
+                  <label className="block text-[#0A1628] mb-2">Role</label>
                   <TextField
                     fullWidth
                     placeholder="e.g., Software Engineer"
