@@ -15,4 +15,3 @@
         "type-check:web": "turbo run type-check --filter=@apps/portal"
     }
 }
-  
