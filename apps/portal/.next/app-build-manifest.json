@@ -16,15 +16,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/team/page.js"
     ],
-    "/impact/page": [
+    "/resources/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/impact/page.js"
-    ],
-    "/initiatives/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/initiatives/page.js"
+      "static/css/app/resources/page.css",
+      "static/chunks/app/resources/page.js"
     ],
     "/calendar/page": [
       "static/chunks/webpack.js",
